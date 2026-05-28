@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import FAQAccordion from '@/components/FAQAccordion'
 
@@ -33,18 +34,16 @@ export default function HomePage() {
               <Link href="/coaching" className="btn-secondary">See how I can help</Link>
             </div>
           </div>
-          {/* Headshot placeholder */}
-          <div
-            className="flex-shrink-0 w-64 h-72 md:w-80 md:h-96 bg-muted-blue/20 rounded-sm flex items-center justify-center border border-muted-blue/30"
-            role="img"
-            aria-label="Dr. Michael Vitulano – headshot placeholder"
-          >
-            <div className="text-center text-muted-blue">
-              <svg className="w-16 h-16 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
-              </svg>
-              <p className="text-xs font-sans">Photo coming soon</p>
-            </div>
+          {/* Headshot */}
+          <div className="flex-shrink-0 w-64 md:w-80 relative">
+            <Image
+              src="/michael-vitulano.avif"
+              alt="Dr. Michael Vitulano, psychologist and executive coach"
+              width={320}
+              height={400}
+              priority
+              className="rounded-sm object-cover w-full h-auto"
+            />
           </div>
         </div>
       </section>
