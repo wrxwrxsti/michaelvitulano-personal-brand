@@ -3,6 +3,7 @@ import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import CalInit from '@/components/CalInit'
+import BookingModal from '@/components/BookingModal'
 
 export const metadata: Metadata = {
   title: {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="flex flex-col min-h-screen">
         <CalInit />
+        <BookingModal />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

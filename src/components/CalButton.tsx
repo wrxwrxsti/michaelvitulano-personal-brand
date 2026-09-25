@@ -8,19 +8,21 @@ interface Props {
 }
 
 /**
- * Opens the Cal.com popup scheduler for michaelvitulano.
- * CalInit must be mounted (via RootLayout) before this renders.
+ * Opens the booking-choice modal (BookingModal).
+ * BookingModal listens for the 'open-booking-modal' event and routes
+ * the user to either cal.com/michaelvitulano/coaching-consultation
+ * or cal.com/michaelvitulano/therapy based on their pick.
  */
 export default function CalButton({
   className,
   children = 'Book a Free Consultation',
 }: Props) {
+  function handleClick() {
+    window.dispatchEvent(new Event('open-booking-modal'))
+  }
+
   return (
-    <button
-      data-cal-link="michaelvitulano"
-      data-cal-config='{"layout":"month_view"}'
-      className={`cursor-pointer ${className ?? ''}`}
-    >
+    <button onClick={handleClick} className={`cursor-pointer ${className ?? ''}`}>
       {children}
     </button>
   )
