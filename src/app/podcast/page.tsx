@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: 'Resilience Real Talk Podcast | Dr. Michael Vitulano',
@@ -11,7 +12,6 @@ export const metadata: Metadata = {
   },
 }
 
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
 const YOUTUBE_CHANNEL = 'https://www.youtube.com/channel/UC326Ie04t7c-cIHV7m9z9CA'
 
 export default function PodcastPage() {
@@ -100,9 +100,7 @@ export default function PodcastPage() {
       <section className="bg-gold">
         <div className="section-pad text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Want to work together?</h2>
-          <a href={CTA_HREF} className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">
-            Book a Free Consultation
-          </a>
+          <CalButton className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">Book a Free Consultation</CalButton>
         </div>
       </section>
     </>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: 'Executive Functioning Skills for Adults with ADHD | Dr. Michael Vitulano',
@@ -11,8 +12,6 @@ export const metadata: Metadata = {
   },
 }
 
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
-
 export default function ADHDPage() {
   return (
     <>
@@ -24,7 +23,7 @@ export default function ADHDPage() {
           <p className="font-sans text-lg text-base/80 leading-relaxed max-w-xl mb-8">
             Build the focus, planning, and follow-through skills that ADHD makes harder, with support from a psychologist who&apos;s spent his career studying and treating ADHD.
           </p>
-          <a href={CTA_HREF} className="btn-outline-light">Book a Free Consultation</a>
+          <CalButton className="btn-outline-light">Book a Free Consultation</CalButton>
         </div>
       </section>
 
@@ -87,9 +86,7 @@ export default function ADHDPage() {
       <section className="bg-gold">
         <div className="section-pad text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-white mb-4">Ready to build real executive skills?</h2>
-          <a href={CTA_HREF} className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">
-            Book a Free Consultation
-          </a>
+          <CalButton className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">Book a Free Consultation</CalButton>
         </div>
       </section>
     </>

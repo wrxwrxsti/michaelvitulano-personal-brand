@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: 'About Dr. Michael Vitulano | Psychologist & Executive Coach',
@@ -11,8 +12,6 @@ export const metadata: Metadata = {
     url: 'https://michaelvitulano.com/about',
   },
 }
-
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
 
 const credentials = [
   'Triple-state licensed psychologist: CT (PSY #003957), WA (PY #60607324), CO (PSY #0006009)',
@@ -111,7 +110,7 @@ export default function AboutPage() {
       {/* ABOUT-06 CTA */}
       <section className="section-pad text-center max-w-3xl mx-auto">
         <h2 className="font-serif text-3xl md:text-4xl text-slate-blue mb-6">Let&apos;s talk.</h2>
-        <a href={CTA_HREF} className="btn-primary">Book a Free Consultation</a>
+        <CalButton className="btn-primary">Book a Free Consultation</CalButton>
       </section>
     </>
   )

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: 'Contact | Book a Free Consultation',
@@ -11,8 +12,6 @@ export const metadata: Metadata = {
     url: 'https://michaelvitulano.com/contact',
   },
 }
-
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
 
 export default function ContactPage() {
   return (
@@ -33,7 +32,7 @@ export default function ContactPage() {
         <div>
           {/* CONT-02 Scheduling CTA */}
           <h2 className="font-serif text-2xl text-slate-blue mb-4">Book your free consultation</h2>
-          <a href={CTA_HREF} className="btn-primary mb-4 inline-block">Book a Free Consultation</a>
+          <CalButton className="btn-primary mb-4 inline-block">Book a Free Consultation</CalButton>
           <p className="font-sans text-sm text-near-black/60 mt-3">Prefer email? Reach me directly below.</p>
 
           {/* CONT-04 Direct contact */}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import FAQAccordion from '@/components/FAQAccordion'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: 'Dr. Michael Vitulano | Psychologist & Executive Coach',
@@ -13,8 +14,6 @@ export const metadata: Metadata = {
     url: 'https://michaelvitulano.com',
   },
 }
-
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
 
 export default function HomePage() {
   return (
@@ -30,7 +29,7 @@ export default function HomePage() {
               I&apos;m Dr. Michael Vitulano, a psychologist and executive coach. I help people gain focus, take action, and build momentum, in their careers and their mental health. The goal is simple: move from insight to action.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href={CTA_HREF} className="btn-primary">Book a Free Consultation</a>
+              <CalButton className="btn-primary">Book a Free Consultation</CalButton>
               <Link href="/coaching" className="btn-secondary">See how I can help</Link>
             </div>
           </div>
@@ -163,9 +162,7 @@ export default function HomePage() {
           <p className="font-sans text-white/90 text-lg mb-8 max-w-xl mx-auto">
             Book a free consultation. We&apos;ll talk through where you&apos;re stuck and whether coaching or therapy is the right next step.
           </p>
-          <a href={CTA_HREF} className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">
-            Book a Free Consultation
-          </a>
+          <CalButton className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">Book a Free Consultation</CalButton>
         </div>
       </section>
     </>

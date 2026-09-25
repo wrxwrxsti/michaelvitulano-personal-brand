@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: 'Therapy | Online Therapy for Anxiety, Burnout & ADHD',
@@ -11,8 +12,6 @@ export const metadata: Metadata = {
     url: 'https://michaelvitulano.com/therapy',
   },
 }
-
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
 
 export default function TherapyPage() {
   return (
@@ -26,7 +25,7 @@ export default function TherapyPage() {
           <p className="font-sans text-lg text-base/80 leading-relaxed mb-8 max-w-xl">
             Evidence-based, supportive care for anxiety, burnout, ADHD, and more, online, from the comfort of home.
           </p>
-          <a href={CTA_HREF} className="btn-outline-light">Book a Free Consultation</a>
+          <CalButton className="btn-outline-light">Book a Free Consultation</CalButton>
         </div>
       </section>
 
@@ -100,9 +99,7 @@ export default function TherapyPage() {
           <p className="font-sans text-white/90 text-lg mb-8 max-w-xl mx-auto">
             Book a free consultation. No pressure, just a conversation about what you need.
           </p>
-          <a href={CTA_HREF} className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">
-            Book a Free Consultation
-          </a>
+          <CalButton className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">Book a Free Consultation</CalButton>
         </div>
       </section>
     </>

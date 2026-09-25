@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: 'Philosophy | The Life Force Framework',
@@ -10,8 +11,6 @@ export const metadata: Metadata = {
     url: 'https://michaelvitulano.com/philosophy',
   },
 }
-
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
 
 const pyramidLayers = [
   {
@@ -127,7 +126,7 @@ export default function PhilosophyPage() {
       {/* PHIL-06 CTA */}
       <section className="section-pad text-center max-w-3xl mx-auto">
         <h2 className="font-serif text-3xl md:text-4xl text-slate-blue mb-6">Curious where you&apos;d start?</h2>
-        <a href={CTA_HREF} className="btn-primary">Book a Free Consultation</a>
+        <CalButton className="btn-primary">Book a Free Consultation</CalButton>
       </section>
     </>
   )

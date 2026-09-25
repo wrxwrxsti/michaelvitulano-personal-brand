@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: 'Executive Coaching for Founders & Professionals',
@@ -11,8 +12,6 @@ export const metadata: Metadata = {
     url: 'https://michaelvitulano.com/coaching',
   },
 }
-
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
 
 export default function CoachingPage() {
   return (
@@ -26,7 +25,7 @@ export default function CoachingPage() {
           <p className="font-sans text-lg text-base/80 leading-relaxed mb-8 max-w-xl">
             Sharpen your focus, make better decisions, and execute consistently, with structured, evidence-based coaching from a licensed psychologist.
           </p>
-          <a href={CTA_HREF} className="btn-outline-light">Book a Free Career Consultation</a>
+          <CalButton className="btn-outline-light">Book a Free Career Consultation</CalButton>
         </div>
       </section>
 
@@ -171,9 +170,7 @@ export default function CoachingPage() {
           <p className="font-sans text-white/90 text-lg mb-8 max-w-xl mx-auto">
             Book a free career consultation and we&apos;ll map out where you&apos;re stuck and how coaching can help.
           </p>
-          <a href={CTA_HREF} className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">
-            Book a Free Career Consultation
-          </a>
+          <CalButton className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">Book a Free Career Consultation</CalButton>
         </div>
       </section>
     </>

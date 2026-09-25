@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import CalButton from '@/components/CalButton'
 
 const links = [
   { href: '/', label: 'Home' },
@@ -12,8 +13,6 @@ const links = [
   { href: '/podcast', label: 'Podcast' },
   { href: '/contact', label: 'Contact' },
 ]
-
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -40,9 +39,7 @@ export default function Nav() {
               {l.label}
             </Link>
           ))}
-          <a href={CTA_HREF} className="btn-primary text-sm">
-            Book a Free Consultation
-          </a>
+          <CalButton className="btn-primary text-sm" />
         </nav>
 
         {/* Mobile hamburger */}
@@ -80,9 +77,7 @@ export default function Nav() {
               {l.label}
             </Link>
           ))}
-          <a href={CTA_HREF} className="btn-primary text-center mt-2">
-            Book a Free Consultation
-          </a>
+          <CalButton className="btn-primary text-center mt-2 w-full" />
         </nav>
       )}
     </header>

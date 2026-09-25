@@ -1,6 +1,5 @@
 import Link from 'next/link'
-
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
+import CalButton from '@/components/CalButton'
 
 export default function Footer() {
   return (
@@ -24,9 +23,7 @@ export default function Footer() {
           <a href="tel:12035215579" className="block text-sm hover:text-gold transition-colors mt-1">
             1-203-521-5579
           </a>
-          <a href={CTA_HREF} className="btn-outline-light text-sm mt-4">
-            Book a Free Consultation
-          </a>
+          <CalButton className="btn-outline-light text-sm mt-4 inline-block" />
         </div>
 
         <div>

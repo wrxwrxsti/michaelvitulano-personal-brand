@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import CalButton from '@/components/CalButton'
 
 export const metadata: Metadata = {
   title: 'Online Anxiety Therapy | Dr. Michael Vitulano',
@@ -11,8 +12,6 @@ export const metadata: Metadata = {
   },
 }
 
-const CTA_HREF = 'mailto:michael.vitulano@gmail.com?subject=First%20Step%20to%20Success'
-
 export default function AnxietyTherapyPage() {
   return (
     <>
@@ -24,7 +23,7 @@ export default function AnxietyTherapyPage() {
           <p className="font-sans text-lg text-base/80 leading-relaxed max-w-xl mb-8">
             Evidence-based therapy for anxiety, from the comfort of home, with a licensed psychologist.
           </p>
-          <a href={CTA_HREF} className="btn-outline-light">Book a Free Consultation</a>
+          <CalButton className="btn-outline-light">Book a Free Consultation</CalButton>
         </div>
       </section>
 
@@ -99,9 +98,7 @@ export default function AnxietyTherapyPage() {
           <p className="font-sans text-white/90 text-lg mb-8 max-w-xl mx-auto">
             Book a free consultation. No pressure, just a conversation about what you need.
           </p>
-          <a href={CTA_HREF} className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">
-            Book a Free Consultation
-          </a>
+          <CalButton className="inline-block bg-white text-gold font-sans font-semibold px-8 py-3 rounded-sm hover:bg-base transition-colors">Book a Free Consultation</CalButton>
         </div>
       </section>
     </>
