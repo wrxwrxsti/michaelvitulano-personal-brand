@@ -2,11 +2,7 @@
 
 import { useState, FormEvent } from 'react'
 
-// ─────────────────────────────────────────────────────────────────────────────
-// After claiming your Formspree form (see README or the link Waris sent you),
-// paste your endpoint here — it looks like: https://formspree.io/f/abcd1234
-// ─────────────────────────────────────────────────────────────────────────────
-const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? ''
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xoevnkyv'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
 
